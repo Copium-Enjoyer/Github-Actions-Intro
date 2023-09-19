@@ -1,5 +1,5 @@
 name: Get Users Lichess
-run-name: ${{ github.actor }} is checking the users of a website! 🚀
+run-name: ${{ github.actor }} is checking the Lichess users! 🦋
 on:
   schedule:
     - cron: "*/2 * * * *"
