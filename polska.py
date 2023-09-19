@@ -2,9 +2,10 @@ import requests
 import re
 import pandas as pd
 import datetime
+import pytz
 
 x = requests.get('https://lichess.org/')
-date = datetime.datetime.now()
+date = datetime.datetime.now(tz=pytz.timezone('Poland'))
 
 if x.status_code == 200:
 
