@@ -1,0 +1,10 @@
+name: Get Users
+run-name: ${{ github.actor }} is checking the users of a website! 🚀
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+jobs:
+  Get-Users:
+  runs-on: ubuntu-latest
+    steps:
+      - run: python polska.py
