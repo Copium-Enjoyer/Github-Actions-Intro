@@ -1,9 +1,7 @@
 name: Get Users Lichess 2 
 run-name: ${{ github.actor }} is checking the Lichess users 2! 🦋
-on:
-  schedule:
-    - cron: '*/6 * * * *'
-on: workflow_dispatch
+on: 
+  workflow_dispatch
 jobs:
   Get-Users:
     runs-on: ubuntu-latest
