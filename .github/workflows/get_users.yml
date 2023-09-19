@@ -7,6 +7,10 @@ on:
 jobs:
   Get-Users-Lichess:
     runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
     steps:
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content
@@ -33,11 +37,8 @@ jobs:
         run: python polska.py
 
       - name: commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated files" --allow-empty)
+        uses: stefanzweifel/git-auto-commit-action@v4
+
 
       - name: push changes
         uses: ad-m/github-push-action@main
