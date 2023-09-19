@@ -1,4 +1,4 @@
-name: Get Users
+name: Get Users Lichess
 run-name: ${{ github.actor }} is checking the users of a website! 🚀
 on:
   schedule:
