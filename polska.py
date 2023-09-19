@@ -14,7 +14,7 @@ if x.status_code == 200:
     print(n)
 
 
-    lichess = pd.read_csv(r"data\lichess.csv")
+    lichess = pd.read_csv("lichess.csv")
 
     print(lichess)
 
@@ -24,7 +24,7 @@ if x.status_code == 200:
         'Games': [n[1]]
     }
 
-    pd.DataFrame(data).to_csv(r"data\lichess.csv", mode='a', index=False, header=False)
+    pd.DataFrame(data).to_csv("lichess.csv", mode='a', index=False, header=False)
 
     
 
