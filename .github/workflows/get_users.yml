@@ -13,7 +13,7 @@ jobs:
       contents: write
     steps:
       - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content
+        uses: actions/checkout@main # checkout the repository content
         with:
           repository: Copium-Enjoyer/Github-Actions-Intro
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
