@@ -37,7 +37,9 @@ jobs:
         run: python polska.py
 
       - name: commit files
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: actions-js/push@v1.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
 
       - name: push changes
