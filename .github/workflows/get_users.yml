@@ -36,15 +36,15 @@ jobs:
       - name: execute py script # run main.py
         run: python polska.py
 
-      - name: commit files
+      - name: commit and push files
         uses: actions-js/push@v1.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
 
-      - name: push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          repository: Copium-Enjoyer/Github-Actions-Intro
-          branch: main
+      # - name: push changes
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     repository: Copium-Enjoyer/Github-Actions-Intro
+      #     branch: main
