@@ -2,7 +2,7 @@ name: Get Users Lichess
 run-name: ${{ github.actor }} is checking the Lichess users! 🦋
 on:
   schedule:
-    - cron: "*/2 * * * *"
+    - cron: "*/5 * * * *"
 jobs:
   Get-Users:
     runs-on: ubuntu-latest
